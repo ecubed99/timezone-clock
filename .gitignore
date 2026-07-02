@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+clock.py.bak
+clock_v0.8.py
+
+assets/world_map.jpg
+assets/world_map.png
+
+.vscode/
+.idea/
+
+*.swp

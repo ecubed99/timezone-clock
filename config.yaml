@@ -1,0 +1,23 @@
+use_24h: true
+draw_connector_lines: false
+show_map_labels: false
+
+theme:
+  night_alpha: 155
+  twilight_degrees: 12
+
+cities:
+  - name: Cleveland
+    timezone: America/New_York
+    lat: 41.4993
+    lon: -81.6944
+
+  - name: Hungary
+    timezone: Europe/Budapest
+    lat: 47.1625
+    lon: 19.5033
+
+  - name: India
+    timezone: Asia/Kolkata
+    lat: 20.5937
+    lon: 78.9629
