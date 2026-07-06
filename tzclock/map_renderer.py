@@ -1,4 +1,5 @@
 import json
+import math
 from datetime import datetime, timezone
 
 import pygame
@@ -141,8 +142,49 @@ class MapRenderer:
 
         decl, subsolar_lon = sun_position_approx()
         sx, sy = self.latlon_to_xy(decl, subsolar_lon, rect)
-        pygame.draw.circle(self.screen, (255, 210, 80), (sx, sy), 5)
-        pygame.draw.circle(self.screen, (255, 210, 80), (sx, sy), 11, 1)
+        self.draw_sun_marker(sx, sy)
 
         for city in self.cities:
             self.draw_city_marker(city, rect)
+
+
+    def draw_sun_marker(self, x, y):
+        color = (255, 210, 80)
+        outline = (15, 15, 15)
+        background = (20, 24, 30)
+
+        # Rays
+        for angle in range(0, 360, 45):
+            r = math.radians(angle)
+
+            x1 = x + int(math.cos(r) * 8)
+            y1 = y + int(math.sin(r) * 8)
+            x2 = x + int(math.cos(r) * 15)
+            y2 = y + int(math.sin(r) * 15)
+
+            # Dark outline behind each ray
+            pygame.draw.line(
+                self.screen,
+                outline,
+                (x1, y1),
+                (x2, y2),
+                4,
+            )
+
+            # Colored ray
+            pygame.draw.line(
+                self.screen,
+                color,
+                (x1, y1),
+                (x2, y2),
+                2,
+            )
+
+        # Dark outline around center
+        pygame.draw.circle(self.screen, outline, (x, y), 7)
+
+        # Sun center
+        pygame.draw.circle(self.screen, color, (x, y), 6)
+
+        # Hollow center
+        pygame.draw.circle(self.screen, background, (x, y), 2)
