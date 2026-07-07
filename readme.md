@@ -4,6 +4,7 @@ A Raspberry Pi-powered wall/desk timezone clock with a world map, day/night term
 
 Designed to be an appliance rather than a desktop application. Once configured, the system boots directly into the clock display and can be managed entirely through a web browser.
 
+
 ---
 
 # Features
@@ -19,6 +20,16 @@ Designed to be an appliance rather than a desktop application. Once configured, 
 - Automatic configuration reload (no restart required)
 - Built-in web configuration interface
 - Hardware accelerated via pygame
+
+## UI
+
+![photo showing time data across the top. the bottom displays a mercator projection with the sun, current light/dark lines, and the cities from clock display located on map](https://github.com/user-attachments/assets/934241ae-231e-455b-a06d-51ac59dfa645)
+
+## Web Interface
+
+![photo of the web interface for location and timezone configuration](https://github.com/user-attachments/assets/3f20cdaf-930d-443e-92f6-c924e56f53f8)
+
+
 
 ---
 
