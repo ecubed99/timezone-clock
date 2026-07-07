@@ -337,13 +337,13 @@ Take a screenshot from SSH (you may need to adjust the display environment varia
 sudo -u pi \
 XDG_RUNTIME_DIR=/run/user/1000 \
 WAYLAND_DISPLAY=wayland-0 \
-grim screencap.png
+grim /tmp/screencap.png
 ```
 
 Display the captured image.
 
 ```bash
-feh screencap.png
+feh /tmp/screencap.png
 ```
 
 ---
