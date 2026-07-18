@@ -120,32 +120,36 @@ git clone git@github.com:ecubed99/world_clock.git
 python3 clock.py
 ```
 
-If from SSH session, you have to define the display environment depending on the display server. See the display name section below for more information.
+If from SSH session, you have to define the display environment. Depending on setups, this command generally works If not you will have to get into the weyland and XDG settings, which are outside the scope of this project.
 
 ```bash
 DISPLAY=:0 python3 clock.py
-```
-or
-```bash
-WAYLAND_DISPLAY=wayland-0 python3 clock.py
 ```
 
 ## Set to launch on boot
 
 modify run_clock.sh to match your install location
 
+then choose your preferred startup method below
+
+### labwc
+
+See the section on autorotation, it both fixes rotation and automatically starts the appliance.
+
+### crontab
+
 make run_clock.sh executable (if it isn't already)
 
 ```bash
 chmod +x run_clock.sh
 ```
-Set to run on reboot in crontab
+Edit your crontab settings
 
 ```bash
 crontab -e
 ```
 
-add a line like this with your script location:
+Add a line like this with your script location:
 
 ```bash
 @reboot /path/to/run_clock.sh
