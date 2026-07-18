@@ -71,7 +71,7 @@ timezone-clock/
 
 # Initial Setup
 
-Update the Pi.
+Update the Pi (optional)
 
 ```bash
 sudo apt update
@@ -86,7 +86,6 @@ sudo apt install \
     python3-yaml \
     python3-flask \
     python3-requests \
-    python3-gfxdraw \
     grim \
     feh
 ```
