@@ -114,7 +114,7 @@ git clone git@github.com:ecubed99/world_clock.git
 
 # Running
 
-Launch manually.
+## Launch manually.
 
 ```bash
 python3 clock.py
@@ -130,8 +130,26 @@ or
 WAYLAND_DISPLAY=wayland-0 python3 clock.py
 ```
 
+## Set to launch on boot
 
+modify run_clock.sh to match your install location
 
+make run_clock.sh executable (if it isn't already)
+
+```bash
+chmod +x run_clock.sh
+```
+Set to run on reboot in crontab
+
+```bash
+crontab -e
+```
+
+add a line like this with your script location:
+
+```bash
+@reboot /path/to/run_clock.sh
+```
 
 ---
 
