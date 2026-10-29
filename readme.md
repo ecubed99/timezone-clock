@@ -27,6 +27,8 @@ Designed to be an appliance rather than a desktop application. Once configured, 
 
 ## Web Interface
 
+on port 8080
+
 ![photo of the web interface for location and timezone configuration](https://github.com/user-attachments/assets/3f20cdaf-930d-443e-92f6-c924e56f53f8)
 
 
